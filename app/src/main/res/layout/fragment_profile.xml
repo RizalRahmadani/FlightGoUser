@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragment.ProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/navbar_profile"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_marginLeft="32dp"
+            android:id="@+id/arrow_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@id/img_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:shapeAppearanceOverlay="@style/Circular"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_below="@id/navbar_profile"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/img_btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit"
+        android:layout_below="@id/navbar_profile"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="220dp"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your name"
+        android:fontFamily="@font/poppins_semibold"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/img_user"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/tv_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp">
+        <LinearLayout
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_profile">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/details_account"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details Account"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_profile">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/language"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Changge app language"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_profile">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/help"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_profile">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/history"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/logout"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="#FF0000"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
