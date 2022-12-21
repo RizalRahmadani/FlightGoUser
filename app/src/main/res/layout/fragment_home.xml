@@ -15,19 +15,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/logo_app"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/img_notif"
-            android:background="@drawable/notif"
-            android:layout_alignParentRight="true"/>
+
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_alignParentRight="true"
             android:id="@+id/img_user"
-            android:layout_marginRight="30dp"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/ic_launcher_background"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/user"
             app:shapeAppearanceOverlay="@style/Circular"/>
 
 
@@ -45,7 +39,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/custom_layout_home"
         android:layout_width="match_parent"
-        android:layout_height="450dp">
+        android:layout_height="400dp">
 
         <ImageView
             android:id="@+id/img_flights"

@@ -8,12 +8,18 @@
     <item
         android:id="@+id/item_booking"
         android:enabled="true"
-        android:icon="@drawable/btn_booking"
+        android:icon="@drawable/bookings"
         android:title="My Booking"/>
+    <item
+        android:id="@+id/item_notification"
+        android:enabled="true"
+        android:icon="@drawable/notification"
+        android:title="Notification"/>
     <item
         android:id="@+id/item_profile"
         android:enabled="true"
         android:icon="@drawable/btn_profile"
         android:title="Profile"/>
+
 
 </menu>
