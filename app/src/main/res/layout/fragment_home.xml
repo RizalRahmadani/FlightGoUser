@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/logo_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/logo_app"/>
@@ -26,6 +27,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/logo_app"
             android:layout_marginTop="50dp"
             android:id="@+id/rv_slide_show"
             android:layout_width="wrap_content"

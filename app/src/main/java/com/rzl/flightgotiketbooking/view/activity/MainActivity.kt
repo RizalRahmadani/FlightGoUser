@@ -7,10 +7,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.rzl.flightgotiketbooking.R
 import com.rzl.flightgotiketbooking.databinding.ActivityMainBinding
-import com.rzl.flightgotiketbooking.view.fragment.BookingFragment
-import com.rzl.flightgotiketbooking.view.fragment.HomeFragment
-import com.rzl.flightgotiketbooking.view.fragment.NotificationFragment
-import com.rzl.flightgotiketbooking.view.fragment.ProfileFragment
+import com.rzl.flightgotiketbooking.view.fragment.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var bottomNav : BottomNavigationView
@@ -21,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        loadFragment(HomeFragment())
+        loadFragment(HomesFragment())
         supportActionBar?.hide()
 
         bottomNav = binding.bottomNavigationView
@@ -46,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.item_home -> {
 
-                    loadFragment(HomeFragment())
+                    loadFragment(HomesFragment())
 
                     return@setOnItemSelectedListener true
                 }

@@ -14,56 +14,32 @@
         tools:targetApi="31">
         <activity
             android:name=".view.activity.AvailableFlightActivity"
-            android:exported="false"
-            android:label="@string/title_activity_available_flight"
-            android:theme="@style/Theme.FlightGoTiketBooking.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="true"
+            android:parentActivityName=".view.activity.MainActivity"
+            />
         <activity
             android:name=".view.activity.RegisterActivity"
-            android:exported="false"
-            android:label="@string/title_activity_register"
-            android:theme="@style/Theme.FlightGoTiketBooking.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".view.activity.MainActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false"/>
+
         <activity
-            android:name=".view.activity.HomeActivity"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".view.activity.LoginActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".view.activity.SplashActivity"
             android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.activity.LoginActivity"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
+
+
     </application>
 
 </manifest>
