@@ -13,21 +13,32 @@
         android:theme="@style/Theme.FlightGoTiketBooking"
         tools:targetApi="31">
         <activity
+            android:name=".DetailTiketActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".view.activity.AvailableFlightActivity"
             android:exported="true"
-            android:parentActivityName=".view.activity.MainActivity"
-            />
+            android:parentActivityName=".view.activity.MainActivity" />
         <activity
             android:name=".view.activity.RegisterActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".view.activity.MainActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".view.activity.LoginActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".view.activity.SplashActivity"
             android:exported="true">
@@ -37,9 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
     </application>
 
 </manifest>
