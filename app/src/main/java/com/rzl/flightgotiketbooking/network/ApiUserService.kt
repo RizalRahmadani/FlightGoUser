@@ -11,9 +11,9 @@ interface ApiUserService {
 
 
     @POST("login")
-    fun adminLogin(@Body login: UserDataClass): Call<UserResponse>
+    fun userLogin(@Body login: UserDataClass): Call<UserResponse>
 
     @GET("logout")
-    fun adminLogout(@Header("Authorization") token: String): Call<String>
+    fun userLogout(@Header("Authorization") token: String): Call<String>
 
  }
