@@ -13,14 +13,14 @@
         android:theme="@style/Theme.FlightGoTiketBooking"
         tools:targetApi="31">
         <activity
-            android:name=".DetailTiketActivity"
+            android:name=".view.activity.DetailTiketActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".view.activity.EditProfileActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="From"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
         <EditText
             android:layout_below="@id/tv_from"
             android:id="@+id/et_from"
@@ -66,7 +66,7 @@
             android:textColor="@color/black"
             android:hint="Select City"
             android:fontFamily="@font/poppins_semibold"
-            android:textSize="16dp"/>
+            android:textSize="16sp"/>
         <TextView
             android:layout_alignParentRight="true"
             android:id="@+id/tv_to"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:text="To"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
         <EditText
             android:textAlignment="viewEnd"
             android:layout_alignParentRight="true"
@@ -86,7 +86,7 @@
             android:textColor="@color/black"
             android:hint="Select City"
             android:fontFamily="@font/poppins_semibold"
-            android:textSize="16dp"/>
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_marginTop="8dp"
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:text="Departure Date"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
 
         <EditText
             android:drawablePadding="5dp"
@@ -106,7 +106,7 @@
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:hint="Select date"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_below="@id/tv_departure_date"/>
         <TextView
             android:layout_marginTop="8dp"
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:text="Passenger &amp; Luggage"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
 
         <EditText
             android:drawablePadding="5dp"
@@ -125,7 +125,7 @@
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:hint="Adult"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_below="@id/tv_passenger_luggage"/>
         <EditText
             android:layout_marginLeft="10dp"
@@ -136,7 +136,7 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:hint="Kgs"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_below="@id/tv_passenger_luggage"/>
         <TextView
             android:layout_marginTop="8dp"
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:text="Class"
             android:fontFamily="@font/poppins_regular"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
         <RadioGroup
             android:id="@id/rd_class"
             android:orientation="horizontal"

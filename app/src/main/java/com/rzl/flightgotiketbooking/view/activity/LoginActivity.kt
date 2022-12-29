@@ -4,8 +4,10 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -15,12 +17,15 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.rzl.flightgotiketbooking.R
 import com.rzl.flightgotiketbooking.databinding.ActivityLoginBinding
+import com.rzl.flightgotiketbooking.view.fragment.HomesFragment
+import com.rzl.flightgotiketbooking.viewmodel.AuthViewModel
 
 class LoginActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityLoginBinding
     private lateinit var  auth : FirebaseAuth
     private lateinit var  googleSignInClient : GoogleSignInClient
+    private lateinit var viewModel : AuthViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +66,31 @@ class LoginActivity : AppCompatActivity() {
         if(result.resultCode == Activity.RESULT_OK){
             val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
             handleResult(task)
+        }
+    }
+
+    private fun loginAction() {
+        val email = binding.etEmail.text.toString()
+        val password = binding.etPassword.text.toString()
+        if (email == "" && password ==""){
+            binding.itlEmail.error = "Please fill out this field."
+            binding.itlPassword.error = "Please fill out this field."
+        }else{
+            viewModel.saveLoginStatus(true)
+            viewModel.apiLogin(email, password)
+            viewModel.LoginLive().observe(this){
+                if (it != null){
+                    //save token to Data Store
+                    viewModel.saveData(it.data.role, it.data.accessToken)
+                    Log.d("ACCESS TOKEN: ", it.data.accessToken)
+                    val intent = Intent(this@LoginActivity, HomesFragment::class.java)
+                    startActivity(intent)
+                    finish()
+                    Toast.makeText(this, "Halo ${it.data.role}", Toast.LENGTH_SHORT).show()
+                }else{
+                    Toast.makeText(this, "Failed Login", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 

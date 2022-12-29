@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.AvailableFlightFragment">
+    tools:context=".view.activity.AvailableFlightActivity">
 
     <RelativeLayout
         android:layout_marginTop="8dp"
@@ -27,7 +27,7 @@
             android:fontFamily="@font/poppins_medium"
             android:text="Available Flight"
             android:textColor="@color/black"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
