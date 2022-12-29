@@ -1,4 +1,4 @@
-package com.rzl.flightgotiketbooking.model.auth
+package com.rzl.flightgotiketbooking.model.register
 
 
 import com.google.gson.annotations.SerializedName

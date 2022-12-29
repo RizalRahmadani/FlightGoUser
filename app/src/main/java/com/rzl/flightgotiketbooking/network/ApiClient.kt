@@ -14,9 +14,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object ApiClient {
 
-    private const val BASE_URL = "https://binarstudpenfinalprojectbe-production-77a5.up.railway.app/"
+    private const val BASE_URL = "https://flightgo-be-server.up.railway.app/v1/api"
 
     @Provides
     @Singleton

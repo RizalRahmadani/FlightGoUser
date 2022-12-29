@@ -7,4 +7,9 @@ import retrofit2.http.*
 
 interface ApiService {
 
+//    @POST("api/v1/login")
+//    fun doUserLogin(
+//        @Body userLogin : UserLoginRequest
+//    ):Call<UserLoginResponse>
+
 }

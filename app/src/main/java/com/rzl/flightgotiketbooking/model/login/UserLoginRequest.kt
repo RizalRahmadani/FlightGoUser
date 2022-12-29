@@ -1,4 +1,4 @@
-package com.rzl.flightgotiketbooking.model.auth
+package com.rzl.flightgotiketbooking.model.register
 
 data class UserLoginRequest(
 val email :String,
