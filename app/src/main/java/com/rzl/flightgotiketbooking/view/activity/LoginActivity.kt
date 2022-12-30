@@ -35,6 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
         //btn
         binding.btnSignIn.setOnClickListener{
+//            loginAction()
             startActivity(Intent(this@LoginActivity, MainActivity::class.java) )
         }
         binding.tvSignUp.setOnClickListener {
@@ -69,6 +70,33 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
+    private fun handleResult(task: Task<GoogleSignInAccount>) {
+            if(task.isSuccessful){
+                val account : GoogleSignInAccount? = task.result
+                if (account != null){
+                    updateUI(account)
+                }
+            }else{
+                Toast.makeText(this,task.exception.toString(), Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun updateUI(account: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+        auth.signInWithCredential(credential).addOnCompleteListener{
+            if(it.isSuccessful){
+                val  intent : Intent = Intent (this, MainActivity::class.java)
+                intent.putExtra("name", account.displayName)
+                startActivity(intent)
+            }else{
+                Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    //Login with email and password
+
     private fun loginAction() {
         val email = binding.etEmail.text.toString()
         val password = binding.etPassword.text.toString()
@@ -94,27 +122,4 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleResult(task: Task<GoogleSignInAccount>) {
-            if(task.isSuccessful){
-                val account : GoogleSignInAccount? = task.result
-                if (account != null){
-                    updateUI(account)
-                }
-            }else{
-                Toast.makeText(this,task.exception.toString(), Toast.LENGTH_SHORT).show()
-            }
-    }
-
-    private fun updateUI(account: GoogleSignInAccount) {
-        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-        auth.signInWithCredential(credential).addOnCompleteListener{
-            if(it.isSuccessful){
-                val  intent : Intent = Intent (this, MainActivity::class.java)
-                intent.putExtra("name", account.displayName)
-                startActivity(intent)
-            }else{
-                Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 }

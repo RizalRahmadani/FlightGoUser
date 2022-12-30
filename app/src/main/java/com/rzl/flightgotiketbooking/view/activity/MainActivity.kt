@@ -23,20 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav = binding.bottomNavigationView
 
-//        bottomNav.setOnItemReselectedListener {
-//            when(it.itemId) {
-//                R.id.homeFragment -> {
-//                    loadFragment(HomeFragment())
-//                }
-//                R.id.cameraResultActivity -> {
-//                    loadFragment(UploadFragment())
-//
-//                }
-//                R.id.messageFragment -> {
-//                    loadFragment(ReportFragment())
-//                }
-//            }
-//        }
+
 
 
         bottomNav.setOnItemSelectedListener {
