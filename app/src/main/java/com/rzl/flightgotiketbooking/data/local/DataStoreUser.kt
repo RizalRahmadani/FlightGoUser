@@ -37,7 +37,6 @@ class DataStoreUser(@ApplicationContext val context: Context) {
         it[MYTOKEN] ?: "undefined"
     }
 
-
     @Suppress("RedundantSuspendModifier")
 
     suspend fun deleteToken() =
